@@ -28,20 +28,35 @@ namespace Requests_Coursework
             for (int i = 0; i < lines.Length; i++)
             {
                 string[] tmp = lines[i].Split();
-                Request rq = new Request(int.Parse(tmp[0]), DateTime.Parse(tmp[1]), DateTime.Parse(tmp[2]));
+                Request rq = new Request(int.Parse(tmp[0]), DateTime.Parse(tmp[1] + " " + tmp[2]), DateTime.Parse(tmp[3] + " " + tmp[4]));
                 requests.Add(rq);
             }
         }
 
-        static List<Request> GreedyAlgo(List<Request> requests)
+        static void GreedyAlgo(List<Request> requests, List<Request> sortedRequests)
         {
-            List<Request> sortedRequests = requests;
-            DateTime earliestEnd = sortedRequests[0].endTime;
-            for (int i = 0; i < sortedRequests.Count; i++)
+            DateTime earliestEnd = requests[0].endTime;
+            int indexOfEarliest = 0;
+            for (int i = 0; i < requests.Count; i++)
             {
-                if (sortedRequests[i].endTime < earliestEnd)
-                    earliestEnd = sortedRequests[i].endTime;
+                if (requests[i].endTime < earliestEnd)
+                {
+                    earliestEnd = requests[i].endTime;
+                    indexOfEarliest = i;
+                }
             }
+            sortedRequests.Add(requests[indexOfEarliest]);
+            for (int i = 0; i < requests.Count; i++)
+            {
+                if (requests[i].startTime < earliestEnd)
+                {
+                    requests.RemoveAt(i);
+                    i--;
+                }
+            }
+            if (requests.Count == 0)
+                return;
+            GreedyAlgo(requests, sortedRequests);
         }
 
         static void Main(string[] args)
@@ -49,7 +64,13 @@ namespace Requests_Coursework
             List<Request> requests = new List<Request>();
             StreamReader sr = new StreamReader("requests.txt");
             FillRequests(sr, requests);
-            GreedyAlgo();
+            List<Request> sortedRequests = new List<Request>();
+            GreedyAlgo(requests, sortedRequests);
+            for (int i = 0; i < sortedRequests.Count; i++)
+            {
+                Console.WriteLine(sortedRequests[i].number + " " + sortedRequests[i].startTime + " " + sortedRequests[i].endTime);
+            }
+            Console.ReadKey();
         }
     }
 }
