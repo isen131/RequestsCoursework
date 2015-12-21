@@ -4,3 +4,9 @@ C:\Users\Женя\Desktop\Проекты VS\Requests_Coursework\Requests_Coursew
 C:\Users\Женя\Desktop\Проекты VS\Requests_Coursework\Requests_Coursework\obj\Debug\Requests_Coursework.csprojResolveAssemblyReference.cache
 C:\Users\Женя\Desktop\Проекты VS\Requests_Coursework\Requests_Coursework\obj\Debug\Requests_Coursework.exe
 C:\Users\Женя\Desktop\Проекты VS\Requests_Coursework\Requests_Coursework\obj\Debug\Requests_Coursework.pdb
+C:\Users\crash_000\Documents\Visual Studio 2015\Projects\Requests_Coursework\RequestsCoursework\Requests_Coursework\bin\Debug\Requests_Coursework.exe.config
+C:\Users\crash_000\Documents\Visual Studio 2015\Projects\Requests_Coursework\RequestsCoursework\Requests_Coursework\obj\Debug\Requests_Coursework.exe
+C:\Users\crash_000\Documents\Visual Studio 2015\Projects\Requests_Coursework\RequestsCoursework\Requests_Coursework\obj\Debug\Requests_Coursework.pdb
+C:\Users\crash_000\Documents\Visual Studio 2015\Projects\Requests_Coursework\RequestsCoursework\Requests_Coursework\bin\Debug\Requests_Coursework.exe
+C:\Users\crash_000\Documents\Visual Studio 2015\Projects\Requests_Coursework\RequestsCoursework\Requests_Coursework\bin\Debug\Requests_Coursework.pdb
+C:\Users\crash_000\Documents\Visual Studio 2015\Projects\Requests_Coursework\RequestsCoursework\Requests_Coursework\obj\Debug\Requests_Coursework.csprojResolveAssemblyReference.cache

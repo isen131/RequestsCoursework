@@ -64,11 +64,16 @@ namespace Requests_Coursework
             List<Request> requests = new List<Request>();
             StreamReader sr = new StreamReader("requests.txt");
             FillRequests(sr, requests);
+            for (int i = 0; i < requests.Count; i++)
+            {
+                Console.WriteLine(requests[i].number + " " + requests[i].startTime + "  -  " + requests[i].endTime);
+            }
+            Console.WriteLine();
             List<Request> sortedRequests = new List<Request>();
             GreedyAlgo(requests, sortedRequests);
             for (int i = 0; i < sortedRequests.Count; i++)
             {
-                Console.WriteLine(sortedRequests[i].number + " " + sortedRequests[i].startTime + " " + sortedRequests[i].endTime);
+                Console.WriteLine(sortedRequests[i].number + " " + sortedRequests[i].startTime + "  -  " + sortedRequests[i].endTime);
             }
             Console.ReadKey();
         }
